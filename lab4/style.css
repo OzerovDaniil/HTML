@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e3e4e8; /* Світло-сірий фон для сучасного вигляду */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff; /* Білий фон контейнера */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Глибша тінь */
+    border-radius: 15px; /* Більше закруглення для сучасного вигляду */
+    text-align: center; /* Центрування тексту */
+}
+
+.title {
+    font-size: 34px; /* Збільшений розмір заголовка */
+    color: #2b2e4a; /* Темний синьо-фіолетовий заголовок */
+    margin-bottom: 40px;
+    letter-spacing: 2px; /* Додавання відстані між буквами для стильного вигляду */
+}
+
+.plan {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Дві колонки замість трьох */
+    gap: 30px;
+}
+
+.section {
+    background-color: #f9f9fb; /* Світлий фон секцій */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #ddd; /* Легка рамка для виділення секцій */
+    text-align: left; /* Текст вирівняний зліва */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Легка тінь для глибини */
+}
+
+.section h2 {
+    font-size: 20px;
+    color: #3c415c; /* Синьо-сірий для заголовків */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Великі літери для заголовків */
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Трохи закруглені кути */
+    font-size: 16px;
+    background-color: #f1f1f1; /* Легкий фон для полів вводу */
+    outline: none;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus {
+    background-color: #fff;
+    border-color: #2b2e4a; /* Акцент на синьо-фіолетовий при фокусі */
+}
+
+textarea {
+    resize: none;
+    height: 80px; /* Висота для полів тексту */
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Простір між елементами */
+}
+
+button {
+    background-color: #2b2e4a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1f223a; /* Темніший відтінок при наведенні */
+}
+
+@media (max-width: 768px) {
+    .plan {
+        grid-template-columns: 1fr; /* Одноколонне розташування для мобільних */
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px; /* Менший заголовок на мобільних */
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="text"], textarea {
+        font-size: 14px; /* Зменшений розмір тексту в полях вводу */
+        padding: 10px;
+    }
+
+    .section {
+        padding: 20px; /* Менший відступ для мобільних */
+    }
+}
