@@ -1,47 +1,78 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   height: 100vh;
-  transition: background-image 1s ease-in-out;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
-.container {
-  text-align: center;
-}
-
-button {
-  background-color: #ffcc00;
+#change-bg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  background-color: #f5a623;
+  color: white;
   border: none;
-  padding: 15px 30px;
-  font-size: 18px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 10px;
+  z-index: 10;
 }
 
-button:hover {
-  background-color: DeepPink;
-}
-
-.pokemon-area {
+#container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pokeball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('https://img.pokemondb.net/sprites/items/poke-ball.png');
+  background-size: cover;
+  z-index: 5;
+  animation: bounce 1s ease-out;
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(-20px);
+      opacity: 1;
+  }
+  50% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(-10px);
+      opacity: 1;
+  }
 }
 
 .pokemon {
+  position: absolute;
   width: 100px;
   height: 100px;
-  margin: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+  animation: appear 1s ease-out forwards;
+}
+
+@keyframes appear {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
 }
