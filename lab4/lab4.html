@@ -1,35 +1,67 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>Тижневий Планувальник</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Planner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <h1 class="title">Тижневий Планувальник</h1>
-    <div class="plan">
-        <div class="section goals">
-            <h2>Топ 3 Цілі</h2>
-            <input type="text" placeholder="Ціль 1">
-            <input type="text" placeholder="Ціль 2">
-            <input type="text" placeholder="Ціль 3">
+
+<div class="planner">
+    <h1>WEEKLY PLAN</h1>
+    <div class="header">
+        <div class="week-of">
+            <label for="week">WEEK OF</label>
+            <input type="text" id="week" placeholder="">
         </div>
-        <div class="section days">
-            <div class="day"><h2>Пн</h2><input type="text" placeholder="Завдання..."></div>
-            <div class="day"><h2>Вт</h2><input type="text" placeholder="Завдання..."></div>
-            <div class="day"><h2>Ср</h2><input type="text" placeholder="Завдання..."></div>
-            <div class="day"><h2>Чт</h2><input type="text" placeholder="Завдання..."></div>
-            <div class="day"><h2>Пт</h2><input type="text" placeholder="Завдання..."></div>
-            <div class="day"><h2>Сб</h2><input type="text" placeholder="Завдання..."></div>
-            <div class="day"><h2>Нд</h2><input type="text" placeholder="Завдання..."></div>
+        <div class="healthy-habit">
+            <label for="habit">HEALTHY HABIT</label>
+            <input type="text" id="habit" placeholder="">
         </div>
-        <div class="section next-week">
-            <h2>Наступний тиждень</h2>
-            <input type="text" placeholder="Наступний план...">
+        <div class="feedback">
+            <label>ROCKED IT</label>
+            <input type="checkbox">
+            <label>ROOM FOR IMPROVEMENT</label>
+            <input type="checkbox">
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="goals">
+            <h2>TOP 3 GOALS</h2>
+            <ul>
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+            </ul>
+            <h2>EVERYTHING ELSE</h2>
+            <ul class="everything-else">
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+            </ul>
+            <h2>NEXT WEEK</h2>
+            <ul class="next-week">
+                <li><input type="checkbox"> <input type="text" placeholder=""></li>
+            </ul>
+        </div>
+        
+        <div class="days">
+            <div class="day"><h3>MONDAY</h3><textarea></textarea></div>
+            <div class="day"><h3>TUESDAY</h3><textarea></textarea></div>
+            <div class="day"><h3>WEDNESDAY</h3><textarea></textarea></div>
+            <div class="day"><h3>THURSDAY</h3><textarea></textarea></div>
+            <div class="day"><h3>FRIDAY</h3><textarea></textarea></div>
+            <div class="day"><h3>SATURDAY</h3><textarea></textarea></div>
+            <div class="day"><h3>SUNDAY</h3><textarea></textarea></div>
         </div>
     </div>
 </div>
+
 </body>
 </html>
