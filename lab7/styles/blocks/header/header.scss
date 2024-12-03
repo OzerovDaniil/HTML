@@ -1,0 +1,19 @@
+.header {
+  text-align: center;
+  padding: 50px;
+  background-color: $color-background;
+  color: $color-text;
+
+  &__title {
+    font-size: 4rem;
+    margin: 0;
+    color: $color-gold;
+    text-shadow: 0 0 10px $color-gold;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: $color-accent;
+  }
+}
